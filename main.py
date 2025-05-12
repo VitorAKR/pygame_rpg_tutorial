@@ -7,13 +7,14 @@ class Game:
         #general setup
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH,HEIGTH))
+        pygame.display.set_caption('RPG Pygame Tutorial')
         self.clock = pygame.time.Clock()
 
     def run(self):
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    pygame.exit()
+                    pygame.quit()
                     sys.exit()
 
             self.screen.fill('black')
